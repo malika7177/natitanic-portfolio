@@ -29,7 +29,7 @@ nav ul li {
 }
 nav ul a {
     text-decoration: none;
-    position: relative; /* add this to create a new stacking context */
+    position: relative; 
   }
   
   nav ul a::after {
