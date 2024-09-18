@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 header {
     padding: 40px;
@@ -49,6 +49,7 @@ nav ul a {
   }
 
 .logo-container {
+    padding-right: 120px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -63,3 +64,22 @@ nav ul a {
     color: #ffffff;
     text-decoration: none;
 }
+
+@media only screen and (max-width: 768px) {
+    header {
+      padding: 20px;
+      background-color: rgb(43, 43, 43);
+      width: 100%; 
+    }
+    nav {
+      flex-direction: column; 
+      gap: 20px;
+    }
+    nav ul {
+      flex-direction: column; 
+      gap: 10px; 
+    }
+    .logo-container {
+      padding-right: 20px;
+    }
+  }
