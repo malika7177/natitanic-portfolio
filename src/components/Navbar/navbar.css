@@ -22,12 +22,13 @@ nav ul {
 
 nav ul li {
     list-style: none;
-    color: white;
     font-family: "Montserrat", sans-serif;
 }
+
 nav ul a {
+    color: white;
     text-decoration: none;
-    position: relative; 
+    position: relative;
   }
   
   nav ul a::after {

@@ -4,10 +4,17 @@ import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState(null);
+  const links = [
+    { text: "Home", href: "#home" },
+    { text: "About", href: "#about" },
+    { text: "Portfolio", href: "#portfolio" },
+    { text: "Contact", href: "#contact" },
+  ];
 
   const handleClick = (event) => {
     setActiveLink(event.target.textContent);
   };
+
   return (
     <header className="container">
       <nav>
@@ -16,34 +23,17 @@ const Navbar = () => {
           <a href="#" className="logo">Notitanic</a>
         </div>
         <ul className="nav-links">
-          <a
-            href="#"
-            className={activeLink === "Home" ? "active" : ""}
-            onClick={handleClick}
-          >
-            <li>Home</li>
-          </a>
-          <a
-            href="#about"
-            className={activeLink === "About" ? "active" : ""}
-            onClick={handleClick}
-          >
-            <li>About</li>
-          </a>
-          <a
-            href="#portfolio"
-            className={activeLink === "Portfolio" ? "active" : ""}
-            onClick={handleClick}
-          >
-            <li>Portfolio</li>
-          </a>
-          <a
-            href="#contact"
-            className={activeLink === "Contact" ? "active" : ""}
-            onClick={handleClick}
-          >
-            <li>Contact</li>
-          </a>
+          {links.map((link) => (
+            <li key={link.text}>
+              <a
+                href={link.href}
+                className={activeLink === link.text ? "active" : ""}
+                onClick={handleClick}
+              >
+                {link.text}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
@@ -51,4 +41,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
